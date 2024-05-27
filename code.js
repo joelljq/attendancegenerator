@@ -352,7 +352,7 @@ function doPost(e) {
       var username = getusername(chatId)
       var nmsg = '<b>' + username + ' has updated for</b>\n'
       nmsg += tmsg;
-      sendCMessage('-1002060070830', nmsg);
+      sendCMessage('CHANNELID', nmsg);
     }
     else if (chatDialogStatus === 'WAITING_FOR_MATCHNAME') {
       var valid = uservalid(message);
@@ -548,7 +548,7 @@ function doPost(e) {
           nmsg += updateAttendanceStatus(fname, fstatus, '', '', chatId, timestamp, getCurrentDateDDMMYY());
         }
         msg += 'status to ' + status;
-        sendCMessage('-1002060070830', nmsg.toUpperCase());
+        sendCMessage('CHANNELID', nmsg.toUpperCase());
       }
       else if (message.toLowerCase() === 'others') {
         propertiesService.setProperty(chatId, 'WAITING_FOR_COURSECAMPNAME');
@@ -609,7 +609,7 @@ function doPost(e) {
             nmsg += updateAttendanceStatus(fname, fstatus, '', '', chatId, timestamp, getCurrentDateDDMMYY());
           }
           msg += 'status to ' + fstatus;
-          sendCMessage('-1002060070830', nmsg.toUpperCase());
+          sendCMessage('CHANNELID', nmsg.toUpperCase());
         }
       }
       else {
@@ -639,7 +639,7 @@ function doPost(e) {
           nmsg += updateAttendanceStatus(fname, fstatus, '', pmstatus, chatId, timestamp, getCurrentDateDDMMYY());
         }
         msg += 'status to ' + fstatus + '/' + pmstatus;
-        sendCMessage('-1002060070830', nmsg.toUpperCase());
+        sendCMessage('CHANNELID', nmsg.toUpperCase());
       }
     }
     else if (chatDialogStatus === 'WAITING_FOR_PMSTATUSNAME') {
@@ -657,7 +657,7 @@ function doPost(e) {
         nmsg += updateAttendanceStatus(fname, fstatus, '', pmstatus, chatId, timestamp, getCurrentDateDDMMYY());
       }
       msg += 'status to ' + fstatus + '/' + pmstatus
-      sendCMessage('-1002060070830', nmsg.toUpperCase());
+      sendCMessage('CHANNELID', nmsg.toUpperCase());
     }
     else if (chatDialogStatus === 'WAITING_FOR_ENDDATESTATUS') {
       if (isValidDateFormat(message) === true) {
@@ -682,7 +682,7 @@ function doPost(e) {
             nmsg += updateAttendanceStatus(fname, fstatus, enddate, '', chatId, timestamp, getCurrentDateDDMMYY());
           }
         }
-        sendCMessage('-1002060070830', nmsg.toUpperCase());
+        sendCMessage('CHANNELID', nmsg.toUpperCase());
         msg += 'status to ' + fstatus;
 
 
