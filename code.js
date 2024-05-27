@@ -1,9 +1,9 @@
-var apiToken = "6944157202:AAFEqPcy0_FjiqpJdmI5ckEpPMgUf36q2J0";
-var appUrl = "https://script.google.com/macros/s/AKfycbyvy77kRsl7OgruFyfc8tKPsPBUsIxZt5nosl9AF0LFlzfDaMBcEgGl6WnSJZAPYY7SGA/exec";
+var apiToken = "TELE APITOKEN";
+var appUrl = "APPURL";
 var apiUrl = "https://api.telegram.org/bot" + apiToken;
-var sheet = SpreadsheetApp.openById('1C2ex2r4yVPXzKwmtBPGdhSjqnn0R2ybYUf-oAxEgR-I').getSheetByName('paradestate');
-var dbsheet = SpreadsheetApp.openById('1C2ex2r4yVPXzKwmtBPGdhSjqnn0R2ybYUf-oAxEgR-I').getSheetByName('database');
-var glsheet = SpreadsheetApp.openById('1C2ex2r4yVPXzKwmtBPGdhSjqnn0R2ybYUf-oAxEgR-I').getSheetByName('groupleader');
+var sheet = SpreadsheetApp.openById('SHEET1').getSheetByName('paradestate');
+var dbsheet = SpreadsheetApp.openById('SHEET2').getSheetByName('database');
+var glsheet = SpreadsheetApp.openById('SHEET3').getSheetByName('groupleader');
 var fname = '';
 var fstatus = '';
 var command = {
@@ -11,7 +11,7 @@ var command = {
   "hi": "hello",
   "what is your name?": "my name is devisty bot"
 }
-var CHANNEL_ID = '-1002060070830';
+var CHANNEL_ID = 'CHANNELID';
 function appendToSheet(chatId, name, orddate, link) {
   dbsheet.appendRow([chatId, name, orddate, link]);
 }
