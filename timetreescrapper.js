@@ -11,8 +11,8 @@ function generateUUID() {
 function login2() {
   var url = "https://timetreeapp.com/api/v1/auth/email/signin";
   var payload = {
-    "uid": "joelljq@gmail.com",
-    "password": "divulgeinsecret1",
+    "uid": "UID",
+    "password": "PW",
     "uuid": generateUUID()
   };
 
@@ -96,8 +96,7 @@ function extractSessionId(setCookieHeader) {
 }
 
 function getEvents(cookie) {
-  var url = "https://timetreeapp.com/api/v1/calendar/73606018/events/sync";
-  // var url = "https://timetreeapp.com/api/v1/calendar/101768194/events/sync";
+  var url = "CALENDAR API LINK";
   var headers = {
     "accept": "*/*",
     "accept-language": "en-US,en;q=0.6",
@@ -206,10 +205,8 @@ function updatestatus(eventList) {
   if (nmsg.length != 0) {
     nmsg = removeDuplicates(nmsg);
     msg += nmsg.join('');
-    // sendCMessage('833966104', printattendance());
-    // sendCMessage('833966104', msg);
-    sendCMessage('-1002060070830', printattendance());
-    sendCMessage('-1002060070830', msg);
+    sendCMessage('CHANNELID', printattendance());
+    sendCMessage('CHANNELID', msg);
   }
   return msg
 }
